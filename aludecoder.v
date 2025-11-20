@@ -17,6 +17,9 @@ assign alucontrol = ((aluop == 2'b00) ? 4'b0000 : //lw/sw
 ((aluop == 2'b10) && (funct3 == 3'b111) && (f75 == 1'b0)) ? 4'b0010 : //and 
 ((aluop == 2'b10) && (funct3 == 3'b110) && (f75 == 1'b0)) ? 4'b0011 : //or
 ((aluop == 2'b10) && (funct3 == 3'b100) && (f75 == 1'b0)) ? 4'b0100 : //xor
+((aluop == 2'b10) && (funct3 == 3'b001)) ? 4'b0110 : //SLL
+((aluop == 2'b10) && (funct3 == 3'b101) && (f75 == 1'b0)) ? 4'b0111 ://SRL
+((aluop == 2'b10) && (funct3 == 3'b101) && (f75 == 1'b1)) ? 4'b1000 : //SRA
 4'b0000); 
 
 // funct7[5] is used only when funct3 == 000 so for and or xor it doesnt matter as such

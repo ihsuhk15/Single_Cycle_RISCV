@@ -19,4 +19,3 @@ output reg [31:0] pc;
 // To avoid this set reset to low long enough to cover one rising edge
 
 endmodule
-

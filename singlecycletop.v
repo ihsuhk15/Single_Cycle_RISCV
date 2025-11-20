@@ -70,7 +70,7 @@ ctrlunit cu (
     .opcode(imtoreg[6:0]),
     .zero(),
     .f3(imtoreg[14:12]),
-    .f7(),
+    .f7(imtoreg[31:25]),
     .memtoreg(resultsrc),
     .alusrc(alusrcwire),
     .regwrite(regw),
